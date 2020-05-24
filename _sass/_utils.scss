@@ -1,0 +1,12 @@
+@mixin width-fit-content($widthType: "width") {
+    #{$widthType}: fit-content;
+    #{$widthType}: -moz-fit-content;
+}
+
+@mixin transition($str) {
+    -webkit-transition: #{$str};
+    -moz-transition: #{$str};
+    -ms-transition: #{$str};
+    -o-transition: #{$str};
+    transition: #{$str};      
+}

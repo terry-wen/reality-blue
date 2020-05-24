@@ -17,4 +17,13 @@ plugins:
 paginate: 5
 
 # Site Settings
-title: Terry Wen
+title: Reality Blue
+author: Terry Wen
+url: https://t-wen.space/reality-blue
+sections:
+    - name: section 1
+      file: _section-1.html
+    - name: section 2
+      file: _section-2.html
+    - name: blog
+      file: _blog.html

@@ -1,15 +1,6 @@
 ---
-layout: default
+layout: page
 ---
 
-<body>
-    <div id="main" class="container main">
-        <div id="title" class="container">
-            <h3 class="name"><a href="/index" id="home">Back to home</a></h3>
-        </div>
-        <div id="content" class="content">
-            <h2 class="name">{{ page.title | escape }}</h2>
-            <div class="post-content">{{ content }}</div>
-        </div>
-    </div>
-</body>
+<h2 class="name">{{ page.title | escape }}</h2>
+<div class="post-content">{{ content }}</div>

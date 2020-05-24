@@ -2,7 +2,7 @@
 
 Reality Blue is a Jekyll theme to help you build a cute, minimalist blog and portfolio site.
 
-Disclaimer: this theme was designed to be very flexible, as it is primarily for my own site, but if others would like to use it I am happy to make suggestions and improvements.
+Disclaimer: this theme was not designed to be very flexible, as it is primarily for my own site, but if others would like to use it I am happy to make suggestions and improvements. Consider it under development.
 
 ## Why's it called Reality Blue? It's barely blue.
 
@@ -32,7 +32,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+The primary layout of Reality-Blue is a basic dynamic-page layout.
+
+1. Define your "sections" in the _config.yml and add your content files as includes.
+2. Define further desired CSS/Sass in css/style.scss
+
+Available Includes:
+- post-list: generic blogpost front-page list. links to archive once page is full
+
+Available Layouts:
+- archive: generic post archive
+- default: empty page with default headers
+- home: index with defined sections
+- page: generic page with "return to home" header
+- post: blog post default page
 
 ## Contributing
 

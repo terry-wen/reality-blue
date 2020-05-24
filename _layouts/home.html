@@ -4,19 +4,54 @@ layout: default
 <body>
 	<div id="main" class="container main">
 		<div id="title" class="container">
-			<h1 class="name"><a href="#" id="home">Terry Wen</a></h1>
+			<h1 class="name"><a href="#" id="home">{{ site.title | escape }}</a></h1>
 		</div>
 		<div id="nav" class="container nav">
-			<div class="nav-button-wrapper"><a id="about-link" href="#about" class="nav-button">about</a></div>
-			<div class="nav-button-wrapper"><a id="blog-link" href="#blog" class="nav-button">blog</a></div>
-			<div class="nav-button-wrapper"><a id="portfolio-link" href="#portfolio" class="nav-button">projects</a>
-			</div>
+			{% for section in site.sections %}
+			<div class="nav-button-wrapper"><a id="{{ section.name }}-link" href="#{{ section.name }}" class="nav-button">{{ section.name }}</a></div>
+			{% endfor %}
 		</div>
 		<div id="content" class="content">
-            {% include about.html %}
-            {% include blog.html %}
-            {% include projects.html %}
+			{% for section in site.sections %}
+			<div id="{{ section.name }}" class="content-block hidden {{ section.name }}">
+				{% include {{ section.file }} %}
+			</div>
+			{% endfor %}
         </div>
 	</div>
-	<script src="js/main.js"></script>
+	<script src="js/base.js"></script>
+	<script type="text/javascript">
+		document.addEventListener(`DOMContentLoaded`, function (event) {
+			main = document.getElementById(`main`);
+			home = document.getElementById(`home`);
+			content = document.getElementById(`content`);
+			nav = document.getElementById(`nav`);
+			
+			{% for section in site.sections %}
+			buttons.push(`{{ section.name }}`);
+			{% endfor %}
+
+			home.addEventListener(`click`, function (event) {
+				reset(300);
+			});
+
+			buttons.forEach(section => {
+				document.getElementById(`${section}-link`).addEventListener(`click`, function (event) {
+				let fadeTimeout = 0;
+				if (active) {
+					if (active === section) {
+					return
+					}
+					clearNav();
+					fadeTimeout = 300;
+				}
+				setTimeout(() => {
+					makeActive(section);
+				}, fadeTimeout);
+				});
+			});
+
+			reset(0);
+		});
+	</script>
 </body>
