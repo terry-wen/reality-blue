@@ -34,8 +34,8 @@ Or install it yourself as:
 
 The primary layout of Reality-Blue is a basic dynamic-page layout.
 
-1. Define your "sections" in the _config.yml and add your content files as includes.
-2. Define further desired CSS/Sass in css/style.scss
+1. Define your "sections" in the _config.yml and add your content files as includes. Currently there is support for exactly 3 sections.
+2. Define further desired CSS/Sass in css/style.scss, being sure that 'reality-blue' styling is imported as well
 
 Available Includes:
 - post-list: generic blogpost front-page list. links to archive once page is full

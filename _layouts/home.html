@@ -19,39 +19,5 @@ layout: default
 			{% endfor %}
         </div>
 	</div>
-	<script src="js/base.js"></script>
-	<script type="text/javascript">
-		document.addEventListener(`DOMContentLoaded`, function (event) {
-			main = document.getElementById(`main`);
-			home = document.getElementById(`home`);
-			content = document.getElementById(`content`);
-			nav = document.getElementById(`nav`);
-			
-			{% for section in site.sections %}
-			buttons.push(`{{ section.name }}`);
-			{% endfor %}
-
-			home.addEventListener(`click`, function (event) {
-				reset(300);
-			});
-
-			buttons.forEach(section => {
-				document.getElementById(`${section}-link`).addEventListener(`click`, function (event) {
-				let fadeTimeout = 0;
-				if (active) {
-					if (active === section) {
-					return
-					}
-					clearNav();
-					fadeTimeout = 300;
-				}
-				setTimeout(() => {
-					makeActive(section);
-				}, fadeTimeout);
-				});
-			});
-
-			reset(0);
-		});
-	</script>
+	{% include layout-controller.html %}
 </body>

@@ -35,6 +35,9 @@
     }
 }
 
+// TODO: Make this dynamic with # of sections
+@include nav(3);
+
 // Element Defaults
 html {
     background-color: white;
