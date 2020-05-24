@@ -1,6 +1,6 @@
 # Reality Blue
 
-Reality Blue is a Jekyll theme to help you build a cute, minimalist blog and portfolio site.
+Reality Blue is a Jekyll theme to help you build a cute, minimalist blog and portfolio site. You can view a demo [here](https://t-wen.space/reality-blue) or directly see it in action on my [page](https://t-wen.space).
 
 Disclaimer: this theme was not designed to be very flexible, as it is primarily for my own site, but if others would like to use it I am happy to make suggestions and improvements. Consider it under development.
 
