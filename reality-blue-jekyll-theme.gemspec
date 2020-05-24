@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "reality-blue-jekyll-theme"
-  spec.version       = "0.1.1"
+  spec.version       = "0.1.2"
   spec.authors       = ["Terry Wen"]
   spec.email         = ["wen.terry.e@gmail.com"]
 
