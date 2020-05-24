@@ -19,7 +19,6 @@ paginate: 5
 # Site Settings
 title: Reality Blue
 author: Terry Wen
-baseurl: https://t-wen.space/reality-blue
 sections:
     - name: about
       file: _about.html
