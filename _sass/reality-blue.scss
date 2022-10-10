@@ -74,6 +74,10 @@ a {
 
 .about p {
     margin-left: 15px;
+
+    a {
+        text-decoration: underline 1px dotted;
+    }
 }
 
 .container {
@@ -116,10 +120,6 @@ a {
     a:hover {
         color: $reality-black;
     }
-}
-
-a.home:hover {
-    color: $reality-blue;
 }
 
 .post {
